@@ -1,0 +1,63 @@
+#!/bin/bash
+#仕様
+#1: posit 1-25
+#2: hybrid 26-50
+#3: sievgene 51-75
+
+
+n=1
+m=36
+
+
+#############outputdirから開始です######################
+
+#全体ループ
+while  [ $n -le $m ] 
+    do
+
+# 命名
+    if [ $n -lt 10 ]
+        then
+        DXX=U0$n
+        else
+        DXX=U$n
+    fi
+##################################
+
+	if [ ! -e ./$DXX/$DXX.sdf ]; then
+
+        	cd ./$DXX
+        	babel -isdf ./$DXX.sdf -omol2 ../structs/$DXX.mol2 
+        	cd ..
+
+	else 
+		echo "$DXX not found!"
+	
+	fi
+		
+#nの再定義
+    n=`expr $n + 1 `
+    done
+
+
+#rename
+n=1
+cd ./structs
+
+while  [ $n -le $m ] 
+    do
+# 命名
+    if [ $n -lt 10 ]
+        then
+        DXX=U0$n
+        else
+        DXX=U$n
+    fi
+##################################
+
+        sed -i -e "s/LIG1/$DXX/g"  $DXX.mol2
+
+
+#nの再定義
+    n=`expr $n + 1 `
+    done

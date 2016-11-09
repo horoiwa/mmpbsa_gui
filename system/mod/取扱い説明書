@@ -1,0 +1,9 @@
+MODの作り方
+
+[cfiles]
+md2.2.shを変更　cfiles/$MDset/*.in の記述をわすれずに
+pbsa_infoの変更
+
+[inputinfo]
+infoの変更
+leap.EXP/IMP.in

@@ -1,0 +1,12 @@
+source leaprc.ff14SB
+source leaprc.gaff
+loadAmberParams frcmod.ionsjc_tip3p
+loadAmberParams VAR.frcmod
+loadAmberPrep VAR.prep
+b=loadPdb VAR.com.pdb
+addIons b Na+ 3
+addIons b Cl- 0
+check b
+solvateBox b TIP3PBOX 10.0
+saveAmberParm b VAR.com.prmtop VAR.com.inpcrd
+quit

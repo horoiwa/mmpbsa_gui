@@ -1,0 +1,35 @@
+#!/bin/bash
+#仕様
+#1: posit 1-25
+#2: hybrid 26-50
+#3: sievgene 51-75
+
+
+n=1
+m=25
+
+#############outputdirから開始です######################
+
+#全体ループ
+while  [ $n -le $m ] 
+    do
+# 命名
+    if [ $n -lt 10 ]
+        then
+        DXX=D0$n
+        else
+        DXX=D$n
+    fi
+##################################
+        x=`expr $n + 50 `
+        cd ./$DXX
+        sed -i -e "s/LIG1/D$x/g"  "$DXX"_dock.mol2
+        cp ./"$DXX"_dock.mol2  ../../0_TERMINAL/D$x.mol2
+        echo "D$x OK" 
+        cd ..
+
+
+#nの再定義
+    n=`expr $n + 1 `
+    done
+

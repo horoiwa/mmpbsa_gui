@@ -1,0 +1,15 @@
+source leaprc.ff14SB
+source leaprc.gaff
+loadAmberParams frcmod.ionsjc_tip3p
+loadAmberParams D01.frcmod
+loadAmberPrep D01.prep
+b=loadPdb D01.com.pdb
+bond b.110.SG b.136.SG
+bond b.264.SG b.271.SG
+bond b.304.SG b.311.SG
+addIons b Na+ 9
+addIons b Cl- 0
+check b
+solvateBox b TIP3PBOX 10.0
+saveAmberParm b D01.com.prmtop D01.com.inpcrd
+quit

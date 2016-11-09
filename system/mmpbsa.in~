@@ -1,0 +1,13 @@
+Input file for running PB and GB in serial
+&general
+startframe=1, endframe=100, interval=1,
+verbose=2, entropy=0,
+/
+&decomp
+idecomp=1, dec_verbose=0,
+/
+&pb
+istrng=0.200, indi = 1.0, 
+exdi = 80.0,
+radiopt = 0,
+/

@@ -1,0 +1,15 @@
+ # min1
+ &cntrl  
+ imin=1,
+ ntmin=1,
+ ncyc=3000,
+ drms=0.1,
+ cut=12,
+ maxcyc=100000,
+ ntpr=50,
+ ntr=1,
+ restraint_wt=100,
+ restraintmask=':1-119'
+ &end
+ 
+

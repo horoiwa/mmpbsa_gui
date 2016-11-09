@@ -1,0 +1,9 @@
+source leaprc.ff14SB
+source leaprc.gaff
+set default PBradii mbondi2
+loadAmberParams VAR.frcmod
+loadAmberPrep VAR.prep
+b=loadPdb VAR.com.pdb
+check b
+saveAmberParm b VAR.com.prmtop VAR.com.inpcrd
+quit

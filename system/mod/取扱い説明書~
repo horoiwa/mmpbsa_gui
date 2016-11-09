@@ -1,0 +1,4 @@
+MODの作り方
+
+md2.2.shを変更　cfiles/$MDset/*.in の記述をわすれずに
+infoとpbsa_infoを変更

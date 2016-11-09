@@ -1,0 +1,16 @@
+Stage 1 heating of TC5b 0 to 50K
+ &cntrl
+  imin=0,irest=1,ntx=5,
+  nstlim=150000,dt=0.001,ntb=0,
+  ntf=2,ntc=2, saltcon=0.0,
+  ntpr=1000, ntwx=1000, ntwr=100000,
+  cut=9999.0, rgbmax=35.0, ioutfm=1
+  igb=5,ntt=3,gamma_ln=2.0,nscm=10000,
+  temp0=300.0,ig=-1,
+  ntr=1, restraintmask=':1-118',
+  restraint_wt=0.2,
+/
+ 
+	
+
+

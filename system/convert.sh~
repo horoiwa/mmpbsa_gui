@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+cd ./md1/sdf
+
+for sdf in *.sdf
+	do
+	echo $sdf
+	DXX= ${sdf:0:3}
+	echo $DXX
+	done
+	#do
+	#babel -isdf $DXX.sdf -omol2 ../structs/$DXX.mol2
+	#ed -i -e "s/LIG1/$DXX/g"  ../structs/$DXX.mol2 
+	#done
+
+cd ../..
